@@ -1,0 +1,80 @@
+[
+    {
+        "category": "NTR",
+        "cost": "",
+        "description": "A later 70s atomic engine. Relatively low TWR but high ISP and power generation of 4200 MW. Derived from the Phoebus 2A ground demonstrator, tested in 1968. Plume configured by RealPlume.",
+        "engine_config": "NERVAII",
+        "entry_cost": "2000000",
+        "entry_cost_mods": "NERVA-II",
+        "era": "07-SPCPLANES",
+        "identical_part_name": "",
+        "info": "Engine",
+        "mod": "Kerbal Atomics",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Nuclear"
+        ],
+        "name": "ntr-sc-125-2",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "NERVA II",
+        "technology": "basicNuclearPropulsion",
+        "title": "NERVA II",
+        "upgrade": false,
+        "year": "1983"
+    },
+    {
+        "category": "NTR",
+        "cost": "28000",
+        "description": "Low thrust pump-fed expander nuclear engine. Evolved for the original NERVA design the Bimodal NTR, instead of wasting precious propellant mass for cooling the engine reactor, uses a Brayton cycle electricity generator unit to convert the waste thermal energy into useful electrical power. It also supports liquid oxygen injection (TRITON - trimodal operation) for increased thrust but with the cost of a lower overall efficiency. Plume configured by RealPlume.",
+        "engine_config": "BNTR",
+        "entry_cost": "2500000",
+        "entry_cost_mods": "BNTR",
+        "era": "11-NF",
+        "identical_part_name": "BNTR",
+        "info": "Engine",
+        "mod": "Kerbal Atomics",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Nuclear"
+        ],
+        "name": "ntr-sc-25-1",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "Bimodal NTR",
+        "technology": "nuclearPropulsionNF",
+        "title": "",
+        "upgrade": false,
+        "year": "2021"
+    },
+    {
+        "category": "NTR",
+        "cost": "25000",
+        "description": "1970s low TWR vacuum engine. the NERVA (Nuclear Engine for Rocket Vehicle Applications) is designed for orbital tugs and large rocket upper stages. Diameter: [1.25 m]. Plume configured by RealPlume.",
+        "engine_config": "NERVA",
+        "entry_cost": "1750000",
+        "entry_cost_mods": "NERVA-I",
+        "era": "06-STATION",
+        "identical_part_name": "",
+        "info": "Engine",
+        "mod": "Kerbal Atomics",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Nuclear"
+        ],
+        "name": "ntr-sc-125-1",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "NERVA",
+        "technology": "earlyNuclearPropulsion",
+        "title": "NERVA I",
+        "upgrade": false,
+        "year": "1973"
+    }
+]

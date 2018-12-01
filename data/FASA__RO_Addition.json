@@ -1,0 +1,27 @@
+[
+    {
+        "category": "ORBITAL",
+        "cost": "1300",
+        "description": "Pump-fed kerolox open cycle (gas generator) booster engine developed from LR79/89. Backup proposal for the first stage engine on the Titan 1 ICBM, and proposed first stage engine on the Saturn 1 but ultimately never flown (4 E-1s replaced with 8 H-1s). Diameter: [2.14 m]. Plume configured by RealPlume.",
+        "engine_config": "E1",
+        "entry_cost": "60000",
+        "entry_cost_mods": "E-1",
+        "era": "03-HUMAN",
+        "identical_part_name": "E1",
+        "info": "",
+        "mod": "FASA (RO Addition)",
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ],
+        "name": "FASAE1",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "E-1",
+        "technology": "orbitalRocketry1963",
+        "title": "E-1",
+        "upgrade": false,
+        "year": "1963"
+    }
+]

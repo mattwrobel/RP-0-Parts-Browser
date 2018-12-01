@@ -1,0 +1,30 @@
+[
+    {
+        "category": "COMMAND",
+        "cost": "6120",
+        "description": "A two-person pod. Features an offset Center of Mass to allow lifting reentry and an integrated bipropellant Attitude Control System (ACS) for controlled reentries. Heat shield rated for LEO reentries.",
+        "engine_config": "",
+        "entry_cost": "322000",
+        "entry_cost_mods": "",
+        "era": "04-ADV",
+        "identical_part_name": "",
+        "info": "Command Module",
+        "mod": "K2 Command Pod",
+        "module_tags": [
+            "Avionics",
+            "Habitable",
+            "HumanRated",
+            "Reentry"
+        ],
+        "name": "K2Pod",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "Gemini",
+        "technology": "secondGenCapsules",
+        "title": "K2 Command Pod (2.5 m)",
+        "upgrade": false,
+        "year": "1965"
+    }
+]

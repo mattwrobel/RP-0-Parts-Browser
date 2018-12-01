@@ -1,0 +1,25 @@
+[
+    {
+        "category": "MATERIALS",
+        "cost": "10",
+        "description": "",
+        "engine_config": "",
+        "entry_cost": "1000",
+        "entry_cost_mods": "",
+        "era": "01-PW",
+        "identical_part_name": "",
+        "info": "",
+        "mod": "Procedural Parts (RO Addition)",
+        "module_tags": [],
+        "name": "KzFlatBoattail",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "technology": "postWarMaterialsScience",
+        "title": "Boattail Adapter",
+        "upgrade": false,
+        "year": "1950"
+    }
+]

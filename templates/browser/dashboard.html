@@ -1,0 +1,147 @@
+{% extends "browser/layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+  
+  <div id="parts_table"></div>
+  
+  <script>
+  Fancy.loadModule('form');
+	document.addEventListener("DOMContentLoaded", function() {
+  new FancyGrid({
+    title: 'RP-0 Parts',
+    renderTo: 'parts_table',
+    selModel: 'cells',
+    striped: true,
+    width: '1850',
+    height: 'fit',
+    nativeScroller: true,
+    data: {
+      proxy: {
+        url: '/api/part_data'
+      }
+    },
+    defaults: {
+      type: 'string',
+	  flex: 1,  
+	  sortable: true,
+      ellipsis: false,
+	  filter: {
+        header: true,
+        emptyText: 'Filter'
+      }
+    },
+    expander: {
+        tpl: [
+        '<div style="float: left;">',
+          '<b>Description:</b> {description}',
+        '</div>'
+      ].join(""),
+      },
+	paging: {
+      pageSize: 15,
+      pageSizeData: [5, 10, 15, 20, 25, 50, 100, 500, 1000]
+    },
+    columns: [{
+        type: 'expand',
+        locked: true
+    },{
+      index: 'name',
+      title: 'Name',
+      width: 200
+    }, {
+      index: 'title',
+      title: 'Title',
+      type: 'text',
+      width: 250
+    }, {
+      index: 'mod',
+      title: 'Mod',
+	  width: 200,
+      type: 'combo',
+	  multiSelect: true,
+	  itemCheckBox: true,
+	  data: {
+		proxy: {
+		  url: '/api/unique_values_for_column/mod'
+		}
+	  }
+    }, {
+      index: 'cost',
+      title: 'Cost',
+      width: 65,
+      type: 'number'
+    }, {
+      index: 'entry_cost',
+      title: 'Entry Cost',
+      width: 75,
+      type: 'number'
+    }, {
+      index: 'ro',
+      title: 'RO',
+      width: 40,
+      type: 'checkbox'
+    }, {
+      index: 'rp0',
+      title: 'RP-0',
+      width: 40,
+      type: 'checkbox'
+    }, {
+      index: 'rp0_conf',
+      title: 'RP-0 Conf',
+      width: 75,
+      type: 'checkbox'
+    }, {
+      index: 'category',
+      title: 'Category',
+      type: 'combo',
+	  multiSelect: true,
+	  itemCheckBox: true,
+	  data: {
+		proxy: {
+		  url: '/api/unique_values_for_column/category'
+		}
+      }
+	}, {
+      index: 'year',
+      title: 'Year'
+    }, {
+      index: 'orphan',
+      title: 'Orphan',
+      width: 65,
+      type: 'checkbox'
+    }, {
+      index: 'upgrade',
+      title: 'Upgrade',
+      width: 65,
+      type: 'checkbox'
+    }, {
+      index: 'entry_cost_mods',
+      title: 'Entry Cost Mods'
+    }, {
+      index: 'identical_part_name',
+      title: 'Identical Part'
+    }, {
+      index: 'technology',
+      title: 'Technology',
+      type: 'combo',
+	  multiSelect: true,
+	  itemCheckBox: true,
+	  data: {
+		proxy: {
+		  url: '/api/unique_values_for_column/technology'
+		}
+      }
+	}, {
+      index: 'module_tags',
+      title: 'Module Tags',
+      type: 'text',
+      autoHeight: true,
+      width: 200
+    }]
+  });
+});
+
+  </script>
+{% endblock %}
