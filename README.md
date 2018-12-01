@@ -6,3 +6,4 @@ To get it working:
    2. It uses flask, so:  pip install flask
    3. Flask uses slugify (I think) so:  pip install slugify
    4. Then you should be able to hit:  python app.py
+   5. Point your browser at:  http://localhost:5000/dashboard
