@@ -22,7 +22,7 @@ def generate_ecm_parts(parts):
     ecm_configs = ""
     for part in parts:
         if part['name'] is not None and len(part['name']) > 0:
-            if part['mod'] != 'Engine_Config':
+            if part['mod'] != 'Engine_Config' and not part['orphan']:
                 if part['entry_cost_mods'] is not None and len(part['entry_cost_mods']) > 0:
                     ecm_configs += module_part_config_template.substitute(name=part['name'], ecm=part['entry_cost_mods'])
     text_file = open("output/ECM-Parts.cfg", "w")

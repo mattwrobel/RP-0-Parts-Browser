@@ -18,7 +18,7 @@ def generate_identical_parts(parts):
     identical_parts_map = {}
     for part in parts:
         if part['name'] is not None and len(part['name']) > 0:
-            if part['mod'] != 'Engine_Config':
+            if part['mod'] != 'Engine_Config' and not part['orphan']:
                 if part['identical_part_name'] is not None and len(part['identical_part_name']) > 0:
                     idp = part['identical_part_name']
                     if idp not in identical_parts_map:

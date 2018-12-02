@@ -17,6 +17,7 @@ class PartData:
         "rp0_conf": set(),
         "spacecraft": set(),
         "engine_config": set(),
+        "era": set(),
         "year": set()
         }
 

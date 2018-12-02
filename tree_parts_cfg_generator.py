@@ -19,7 +19,7 @@ module_part_config_template = Template("""
     %cost = ${cost}
     %entryCost = ${entry_cost}
     RP0conf = ${rp0_conf}
-    @description ^=:\$$: <b><color=green>From ${mod} mod</color></b>${module_tags}
+    @description ^=:$$: <b><color=green>From ${mod} mod</color></b>${module_tags}
 }""")
 module_tag_template = Template("""
     MODULE
@@ -29,7 +29,7 @@ def generate_parts_tree(parts):
     part_configs = ""
     for part in parts:
         if part['name'] is not None and len(part['name']) > 0:
-            if part['mod'] != 'Engine_Config':
+            if part['mod'] != 'Engine_Config' and not part['orphan']:
                 part_configs += generate_part_config(part)
     text_file = open("output/TREE-Parts.cfg", "w")
     text_file.write(tree_parts_header)

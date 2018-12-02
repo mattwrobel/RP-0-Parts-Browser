@@ -50,7 +50,7 @@ def generate_engine_tree(parts):
     engine_configs = ""
     part_upgrades = ""
     for part in parts:
-        if "Engine_Config" == part["mod"]:
+        if "Engine_Config" == part["mod"] and not part['orphan']:
             engine_configs += generate_engine_config(part)
             if 'upgrade' in part and part['upgrade'] is True:
                 part_upgrades += generate_part_upgrade_config(part)

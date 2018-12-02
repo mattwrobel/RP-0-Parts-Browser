@@ -5,7 +5,7 @@
 {% block body %}
   
   <div id="parts_table"></div>
-  
+
   <script>
   Fancy.loadModule('form');
 	document.addEventListener("DOMContentLoaded", function() {
@@ -35,7 +35,8 @@
     expander: {
         tpl: [
         '<div style="float: left;">',
-          '<b>Description:</b> {description}',
+          '<br/><b>Info:</b> {info}',
+          '<br/><b>Description:</b> {description}',
         '</div>'
       ].join(""),
       },
@@ -58,7 +59,7 @@
     }, {
       index: 'mod',
       title: 'Mod',
-	  width: 200,
+	  width: 175,
       type: 'combo',
 	  multiSelect: true,
 	  itemCheckBox: true,
@@ -105,7 +106,8 @@
       }
 	}, {
       index: 'year',
-      title: 'Year'
+      title: 'Year',
+      width: 45
     }, {
       index: 'orphan',
       title: 'Orphan',
@@ -123,6 +125,28 @@
       index: 'identical_part_name',
       title: 'Identical Part'
     }, {
+      index: 'engine_config',
+      title: 'Engine Config',
+      type: 'combo',
+	  multiSelect: true,
+	  itemCheckBox: true,
+	  data: {
+		proxy: {
+		  url: '/api/unique_values_for_column/engine_config'
+		}
+      }
+	}, {
+      index: 'era',
+      title: 'Era',
+      type: 'combo',
+	  multiSelect: true,
+	  itemCheckBox: true,
+	  data: {
+		proxy: {
+		  url: '/api/unique_values_for_column/era'
+		}
+      }
+	}, {
       index: 'technology',
       title: 'Technology',
       type: 'combo',

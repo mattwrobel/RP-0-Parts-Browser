@@ -26,31 +26,6 @@
     },
     {
         "category": "SCIENCE",
-        "cost": "1000",
-        "description": "This Synthetic Aperture RADAR sensor uses its flight path to simulate a much larger antenna. This makes it possible to detect terrain elevation at much higher resolution. The downside is that its field of view is comparatively small, and it works better at higher altitudes. Min Alt: 10km, Max Alt: 8000km, Best Alt: 7500km, FOV: 2",
-        "engine_config": "",
-        "entry_cost": "20000",
-        "entry_cost_mods": "",
-        "era": "06-STATION",
-        "identical_part_name": "",
-        "info": "SCANSat-3",
-        "mod": "SCANsat",
-        "module_tags": [
-            "Instruments"
-        ],
-        "name": "SCANsat_Scanner2",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "",
-        "technology": "deepSpaceScience",
-        "title": "SCAN SAR Altimetry Sensor",
-        "upgrade": false,
-        "year": "1972"
-    },
-    {
-        "category": "SCIENCE",
         "cost": "2000",
         "description": "This multichannel sensor detects radiation across several infrared, visible light, and RADAR bands. This gives it the capability to differentiate between terrain types and biomes. It can also detect anomalies such as structures on the ground. Min Alt: 10km, Max Alt: 5000km, Best Alt: 2500km, FOV: 4",
         "engine_config": "",
@@ -123,5 +98,30 @@
         "title": "SCAN MapTraq\u00c3\u201a\u00c2\u00ae",
         "upgrade": false,
         "year": "1981"
+    },
+    {
+        "category": "SCIENCE",
+        "cost": "1000",
+        "description": "This Synthetic Aperture RADAR sensor uses its flight path to simulate a much larger antenna. This makes it possible to detect terrain elevation at much higher resolution. The downside is that its field of view is comparatively small, and it works better at higher altitudes. Min Alt: 10km, Max Alt: 8000km, Best Alt: 7500km, FOV: 2",
+        "engine_config": "",
+        "entry_cost": "20000",
+        "entry_cost_mods": "",
+        "era": "06-STATION",
+        "identical_part_name": "",
+        "info": "SCANSat-3",
+        "mod": "SCANsat",
+        "module_tags": [
+            "Instruments"
+        ],
+        "name": "SCANsat_Scanner2",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "technology": "deepSpaceScience",
+        "title": "SCAN SAR Altimetry Sensor",
+        "upgrade": false,
+        "year": "1972"
     }
 ]

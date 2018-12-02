@@ -1,31 +1,6 @@
 [
     {
         "category": "SCIENCE",
-        "cost": "250",
-        "description": "The Early Film Camera is used to take photographs of Earth from space. This is a very early camera and lacks resolution in the images. Historically, these were flown on V-2 Rockets.\\nThe photos cannot be transmitted and must be returned for further study. Level 1 Photograph Experiment. Can gather 20% of Photography Science. You can store up to 3 different photos before you need to return them to Earth.",
-        "engine_config": "",
-        "entry_cost": "1",
-        "entry_cost_mods": "",
-        "era": "00-START",
-        "identical_part_name": "",
-        "info": "Photography",
-        "mod": "RP-0 (Stock Model)",
-        "module_tags": [
-            "Instruments"
-        ],
-        "name": "science_module",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "PHOTO-1/4",
-        "technology": "unlockParts",
-        "title": "Early Film Camera",
-        "upgrade": false,
-        "year": "0"
-    },
-    {
-        "category": "SCIENCE",
         "cost": "2000",
         "description": "The Gas Chromatograph-Mass Spectrometer (GC-MS) is an analytical instrument used for identification of multiple different substances in a selected gas sample, capable of detecting even trace amounts of them. Ideal of analyzing the atmospheric composition of unknown environments. Mass spectrometry is an analytical technique that ionizes chemical species and sorts the ions based on their mass-to-charge ratio. Historically, these simple experiments were flown on interplanetary crafts including the Mars Viking Lander and Cassini.\\nLevel 4 Mass Spectrometry Experiment Device. Can gather 100% of Mass Spectrometry Science.",
         "engine_config": "",
@@ -48,5 +23,30 @@
         "title": "Gas Chromatograph-Mass Spectrometer (GC/MS)",
         "upgrade": false,
         "year": "1975"
+    },
+    {
+        "category": "SCIENCE",
+        "cost": "250",
+        "description": "The Early Film Camera is used to take photographs of Earth from space. This is a very early camera and lacks resolution in the images. Historically, these were flown on V-2 Rockets.\\nThe photos cannot be transmitted and must be returned for further study. Level 1 Photograph Experiment. Can gather 20% of Photography Science. You can store up to 3 different photos before you need to return them to Earth.",
+        "engine_config": "",
+        "entry_cost": "1",
+        "entry_cost_mods": "",
+        "era": "00-START",
+        "identical_part_name": "",
+        "info": "Photography",
+        "mod": "RP-0 (Stock Model)",
+        "module_tags": [
+            "Instruments"
+        ],
+        "name": "science_module",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "PHOTO-1/4",
+        "technology": "unlockParts",
+        "title": "Early Film Camera",
+        "upgrade": false,
+        "year": "0"
     }
 ]
