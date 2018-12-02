@@ -8,6 +8,9 @@ from flask import Blueprint, abort, g, render_template, redirect, request, url_f
 from slugify import slugify
 from tree_engine_cfg_generator import generate_engine_tree
 from tree_parts_cfg_generator import generate_parts_tree
+from ecm_engines_cfg_generator import generate_ecm_engines
+from ecm_parts_cfg_generator import generate_ecm_parts
+from identical_parts_cfg_generator import generate_identical_parts
 
 part_data = PartData()
 
@@ -63,6 +66,21 @@ def create_app(test_config=None):
     @app.route('/api/generate_tree_parts_configs')
     def generate_tree_parts_configs():
         generate_parts_tree(part_data.parts)
+        return "true"
+    
+    @app.route('/api/generate_ecm_engines_configs')
+    def generate_ecm_engines_configs():
+        generate_ecm_engines(part_data.parts)
+        return "true"
+        
+    @app.route('/api/generate_ecm_parts_configs')
+    def generate_ecm_parts_configs():
+        generate_ecm_parts(part_data.parts)
+        return "true"
+        
+    @app.route('/api/generate_identical_parts_configs')
+    def generate_identical_parts_configs():
+        generate_identical_parts(part_data.parts)
         return "true"
     
     app.register_blueprint(bp)

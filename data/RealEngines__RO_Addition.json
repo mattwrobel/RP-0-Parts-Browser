@@ -1,5 +1,28 @@
 [
     {
+        "category": "ORBITAL",
+        "cost": "100",
+        "description": "",
+        "engine_config": "KTDU35",
+        "entry_cost": "50000",
+        "entry_cost_mods": "",
+        "era": "04-ADV",
+        "identical_part_name": "",
+        "info": "",
+        "mod": "RealEngines (RO Addition)",
+        "module_tags": [],
+        "name": "RO-RealEngines-KTDU35",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "Soyuz-7K",
+        "technology": "orbitalRocketry1966",
+        "title": "KTDU Series Engine",
+        "upgrade": false,
+        "year": "1966"
+    },
+    {
         "category": "STAGED",
         "cost": "450",
         "description": "Staged combustion kerolox booster engine. Designed by Kuznetsov for the Korolev GR-1 project. Basis for the NK-15 used on the N1, and the NK-33 used today. Diameter: [1.3 m]. Plume configured by RealPlume.",
@@ -25,27 +48,29 @@
         "year": "1964"
     },
     {
-        "category": "ORBITAL",
-        "cost": "100",
-        "description": "",
-        "engine_config": "KTDU35",
-        "entry_cost": "50000",
-        "entry_cost_mods": "",
+        "category": "STAGED",
+        "cost": "500",
+        "description": "Staged combustion kerolox upper/vacuum engine. Designed by Kuznetsov for the Korolev GR-1 projet. Reused (as NK-19) on the N1, upgraded for the N1F with restart capability as NK-31. Diameter: [1.8 m]. Plume configured by RealPlume.",
+        "engine_config": "NK9V",
+        "entry_cost": "10000",
+        "entry_cost_mods": "NK-9V",
         "era": "04-ADV",
-        "identical_part_name": "",
+        "identical_part_name": "NK-9V",
         "info": "",
         "mod": "RealEngines (RO Addition)",
-        "module_tags": [],
-        "name": "RO-RealEngines-KTDU35",
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ],
+        "name": "RO-RealEngines-NK9V",
         "orphan": false,
         "ro": true,
         "rp0": true,
         "rp0_conf": true,
-        "spacecraft": "Soyuz-7K",
-        "technology": "orbitalRocketry1966",
-        "title": "KTDU Series Engine",
+        "spacecraft": "",
+        "technology": "stagedCombustion1964",
+        "title": "NK-9V/21/19/39/31",
         "upgrade": false,
-        "year": "1966"
+        "year": "1964"
     },
     {
         "category": "ORBITAL",
@@ -74,28 +99,28 @@
     },
     {
         "category": "STAGED",
-        "cost": "500",
-        "description": "Staged combustion kerolox upper/vacuum engine. Designed by Kuznetsov for the Korolev GR-1 projet. Reused (as NK-19) on the N1, upgraded for the N1F with restart capability as NK-31. Diameter: [1.8 m]. Plume configured by RealPlume.",
-        "engine_config": "NK9V",
-        "entry_cost": "10000",
-        "entry_cost_mods": "NK-9V",
-        "era": "04-ADV",
-        "identical_part_name": "NK-9V",
+        "cost": "120",
+        "description": "",
+        "engine_config": "RD805",
+        "entry_cost": "350",
+        "entry_cost_mods": "",
+        "era": "",
+        "identical_part_name": "",
         "info": "",
         "mod": "RealEngines (RO Addition)",
         "module_tags": [
             "EngineLiquidTurbo"
         ],
-        "name": "RO-RealEngines-NK9V",
+        "name": "RO-RealEngines-RD-805",
         "orphan": false,
         "ro": true,
         "rp0": true,
         "rp0_conf": true,
-        "spacecraft": "",
-        "technology": "stagedCombustion1964",
-        "title": "NK-9V/21/19/39/31",
+        "spacecraft": "Zenit",
+        "technology": "stagedCombustion2004",
+        "title": "RD-805",
         "upgrade": false,
-        "year": "1964"
+        "year": "2007"
     },
     {
         "category": "ORBITAL",
@@ -146,30 +171,5 @@
         "title": "RD-0105/0109 Series",
         "upgrade": false,
         "year": "1958"
-    },
-    {
-        "category": "STAGED",
-        "cost": "120",
-        "description": "",
-        "engine_config": "RD805",
-        "entry_cost": "350",
-        "entry_cost_mods": "",
-        "era": "",
-        "identical_part_name": "",
-        "info": "",
-        "mod": "RealEngines (RO Addition)",
-        "module_tags": [
-            "EngineLiquidTurbo"
-        ],
-        "name": "RO-RealEngines-RD-805",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "Zenit",
-        "technology": "stagedCombustion2004",
-        "title": "RD-805",
-        "upgrade": false,
-        "year": "2007"
     }
 ]

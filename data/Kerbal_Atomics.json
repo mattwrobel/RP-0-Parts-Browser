@@ -1,6 +1,32 @@
 [
     {
         "category": "NTR",
+        "cost": "25000",
+        "description": "1970s low TWR vacuum engine. the NERVA (Nuclear Engine for Rocket Vehicle Applications) is designed for orbital tugs and large rocket upper stages. Diameter: [1.25 m]. Plume configured by RealPlume.",
+        "engine_config": "NERVA",
+        "entry_cost": "1750000",
+        "entry_cost_mods": "NERVA-I",
+        "era": "06-STATION",
+        "identical_part_name": "",
+        "info": "Engine",
+        "mod": "Kerbal Atomics",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Nuclear"
+        ],
+        "name": "ntr-sc-125-1",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "NERVA",
+        "technology": "earlyNuclearPropulsion",
+        "title": "NERVA I",
+        "upgrade": false,
+        "year": "1973"
+    },
+    {
+        "category": "NTR",
         "cost": "",
         "description": "A later 70s atomic engine. Relatively low TWR but high ISP and power generation of 4200 MW. Derived from the Phoebus 2A ground demonstrator, tested in 1968. Plume configured by RealPlume.",
         "engine_config": "NERVAII",
@@ -50,31 +76,5 @@
         "title": "",
         "upgrade": false,
         "year": "2021"
-    },
-    {
-        "category": "NTR",
-        "cost": "25000",
-        "description": "1970s low TWR vacuum engine. the NERVA (Nuclear Engine for Rocket Vehicle Applications) is designed for orbital tugs and large rocket upper stages. Diameter: [1.25 m]. Plume configured by RealPlume.",
-        "engine_config": "NERVA",
-        "entry_cost": "1750000",
-        "entry_cost_mods": "NERVA-I",
-        "era": "06-STATION",
-        "identical_part_name": "",
-        "info": "Engine",
-        "mod": "Kerbal Atomics",
-        "module_tags": [
-            "EngineLiquidTurbo",
-            "Nuclear"
-        ],
-        "name": "ntr-sc-125-1",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "NERVA",
-        "technology": "earlyNuclearPropulsion",
-        "title": "NERVA I",
-        "upgrade": false,
-        "year": "1973"
     }
 ]

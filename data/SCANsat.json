@@ -1,6 +1,31 @@
 [
     {
         "category": "SCIENCE",
+        "cost": "500",
+        "description": "This radar set can provide low-resolution altimetry data. Best with low altitude orbits.",
+        "engine_config": "",
+        "entry_cost": "10000",
+        "entry_cost_mods": "",
+        "era": "03-HUMAN",
+        "identical_part_name": "",
+        "info": "SCANSat-1",
+        "mod": "SCANsat",
+        "module_tags": [
+            "Instruments"
+        ],
+        "name": "SCANsat_Scanner",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "technology": "scienceHuman",
+        "title": "SCAN RADAR Altimetry Sensor",
+        "upgrade": false,
+        "year": "1961"
+    },
+    {
+        "category": "SCIENCE",
         "cost": "1000",
         "description": "This Synthetic Aperture RADAR sensor uses its flight path to simulate a much larger antenna. This makes it possible to detect terrain elevation at much higher resolution. The downside is that its field of view is comparatively small, and it works better at higher altitudes. Min Alt: 10km, Max Alt: 8000km, Best Alt: 7500km, FOV: 2",
         "engine_config": "",
@@ -48,31 +73,6 @@
         "title": "SCAN Multispectral Sensor",
         "upgrade": false,
         "year": "1964"
-    },
-    {
-        "category": "SCIENCE",
-        "cost": "500",
-        "description": "This radar set can provide low-resolution altimetry data. Best with low altitude orbits.",
-        "engine_config": "",
-        "entry_cost": "10000",
-        "entry_cost_mods": "",
-        "era": "03-HUMAN",
-        "identical_part_name": "",
-        "info": "SCANSat-1",
-        "mod": "SCANsat",
-        "module_tags": [
-            "Instruments"
-        ],
-        "name": "SCANsat_Scanner",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "",
-        "technology": "scienceHuman",
-        "title": "SCAN RADAR Altimetry Sensor",
-        "upgrade": false,
-        "year": "1961"
     },
     {
         "category": "SCIENCE",

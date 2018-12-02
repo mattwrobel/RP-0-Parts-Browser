@@ -77,7 +77,7 @@ class PartData:
                 else:
                     line_count += 1
                     self.parts.append(self.create_part(row))
-            print(f'Loaded {line_count} parts.')
+            print(f'Loaded {len(self.parts)} parts.')
 
     # This method created the parts given a row from the original spreadsheet CSV file.
     # DEPRECATED
