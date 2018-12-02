@@ -4879,7 +4879,7 @@
         "mod": "Engine_Config",
         "module_tags": [],
         "name": "AJ10-118",
-        "orphan": true,
+        "orphan": false,
         "ro": true,
         "rp0": false,
         "rp0_conf": false,

@@ -752,7 +752,7 @@ Mode#1,Mode#1,,0,0,Engine_Config,Yes,,SPACEPLANES,,2003,advancedSpaceplanes,09-I
 RD-100,RD-100,,0,0,Engine_Config,Yes,,ORBITAL,,0,unlockParts,00-START,,,RD-100,RD100,,0,,,,,,,,,,,,,,,,,,,
 RD-180,RD-180,,0,0,Engine_Config,Yes,,STAGED,,2002,stagedCombustion1998,09-INTL,,,Atlas V,RD180,,0,,,,,,,,,,,,,,,,,,,
 Phoebus1N50-Hydrogen,Phoebus1N50-Hydrogen,,0,0,Engine_Config,Yes,Yes,NTR,,1972,earlyNuclearPropulsion,06-STATION,,true,,Phoebus1N50,,0,,,,,,,,,,,,,,,,,,,
-AJ10-118,AJ10-118,Used on Delta A,-30,0,Engine_Config,Yes,,ORBITAL,,1962,orbitalRocketry1962,03-HUMAN,Yes,,,AJ10_Early,YES,"1000, AJ10-142",,,,,,,,,,,,,,,,,,,
+AJ10-118,AJ10-118,Used on Delta A,-30,0,Engine_Config,Yes,,ORBITAL,,1962,orbitalRocketry1962,03-HUMAN,No,,,AJ10_Early,YES,"1000, AJ10-142",,,,,,,,,,,,,,,,,,,
 NERVA_XE-Hydrogen,NERVA_XE-Hydrogen,,0,0,Engine_Config,Yes,Yes,NTR,,1972,earlyNuclearPropulsion,06-STATION,,true,,NERVA_XE,,0,,,,,,,,,,,,,,,,,,,
 NERVA_NRX-Hydrogen,NERVA_NRX-Hydrogen,,0,0,Engine_Config,Yes,Yes,NTR,,1972,earlyNuclearPropulsion,06-STATION,,true,,NERVA_NRX,,0,,,,,,,,,,,,,,,,,,,
 RS-68,RS-68,,0,0,Engine_Config,Yes,,HYDROLOX,,2002,hydrolox1998,09-INTL,,,Delta IV,RS68,,0,,,,,,,,,,,,,,,,,,,
