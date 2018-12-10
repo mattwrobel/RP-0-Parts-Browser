@@ -24,7 +24,9 @@ def generate_ecm_parts(parts):
         if part['name'] is not None and len(part['name']) > 0:
             if part['mod'] != 'Engine_Config' and not part['orphan']:
                 if part['entry_cost_mods'] is not None and len(part['entry_cost_mods']) > 0:
-                    ecm_configs += module_part_config_template.substitute(name=part['name'].replace('_','-').replace('.','-'), ecm=part['entry_cost_mods'])
+                    # for purposes I don't full understand, we replace all '.' and '_' characters with '-'
+                    # and '?' with ' ' in the part names.  That's what the downstream code expects for whatever reason.
+                    ecm_configs += module_part_config_template.substitute(name=part['name'].replace('_','-').replace('.','-').replace('?',' '), ecm=part['entry_cost_mods'])
     text_file = open("output/ECM-Parts.cfg", "w")
     text_file.write(tree_ecm_parts_header)
     text_file.write(ecm_configs)
