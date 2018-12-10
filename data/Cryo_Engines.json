@@ -1,59 +1,6 @@
 [
     {
         "category": "HYDROLOX",
-        "cost": "5000",
-        "description": "1980s medium TWR, atmospheric and vacuum use. The RD-0120 is a fuel-rich staged combustion engine developed to power the core stage of the Energia launcher. Diameter: [2.6 m]. Plume configured by RealPlume.",
-        "engine_config": "RD0120",
-        "entry_cost": "100000",
-        "entry_cost_mods": "RD-0120",
-        "era": "07-SPCPLANES",
-        "identical_part_name": "RD-0120",
-        "info": "",
-        "mod": "Cryo Engines",
-        "module_tags": [
-            "EngineLiquidTurbo",
-            "HumanRated",
-            "Hydrolox"
-        ],
-        "name": "cryoengine-375-2",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "Energia",
-        "technology": "hydrolox1981",
-        "title": "RD-0120",
-        "upgrade": false,
-        "year": "1985"
-    },
-    {
-        "category": "HYDROLOX",
-        "cost": "3310",
-        "description": "2000s medium TWR, vacuum engine. The J-2X was intended to be used on the upper stages of Ares I and Ares V. Development continued after the cancellation of Ares, and early designs of SLS incorporated the engine, but selection of the RL10-powered Exploration Upper Stage resulted in the project being mothballed. Diameter: [3.0 m]. Plume configured by RealPlume.",
-        "engine_config": "J2X",
-        "entry_cost": "158860",
-        "entry_cost_mods": "J-2X",
-        "era": "10-COMM",
-        "identical_part_name": "J-2X",
-        "info": "",
-        "mod": "Cryo Engines",
-        "module_tags": [
-            "EngineLiquidTurbo",
-            "Hydrolox"
-        ],
-        "name": "cryoengine-25-2",
-        "orphan": false,
-        "ro": true,
-        "rp0": true,
-        "rp0_conf": true,
-        "spacecraft": "J-2X",
-        "technology": "hydrolox2009",
-        "title": "J-2X",
-        "upgrade": false,
-        "year": "2012"
-    },
-    {
-        "category": "HYDROLOX",
         "cost": "1600",
         "description": "1990s high TWR, atmospheric and vacuum use. Vulcain is a gas-generator sustainer engine used on Ariane 5 and intended to be used on Ariane 6. Diameter: [2.1 m]. Plume configured by RealPlume.",
         "engine_config": "Vulcain",
@@ -132,6 +79,32 @@
     },
     {
         "category": "HYDROLOX",
+        "cost": "3310",
+        "description": "2000s medium TWR, vacuum engine. The J-2X was intended to be used on the upper stages of Ares I and Ares V. Development continued after the cancellation of Ares, and early designs of SLS incorporated the engine, but selection of the RL10-powered Exploration Upper Stage resulted in the project being mothballed. Diameter: [3.0 m]. Plume configured by RealPlume.",
+        "engine_config": "J2X",
+        "entry_cost": "158860",
+        "entry_cost_mods": "J-2X",
+        "era": "10-COMM",
+        "identical_part_name": "J-2X",
+        "info": "",
+        "mod": "Cryo Engines",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Hydrolox"
+        ],
+        "name": "cryoengine-25-2",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "J-2X",
+        "technology": "hydrolox2009",
+        "title": "J-2X",
+        "upgrade": false,
+        "year": "2012"
+    },
+    {
+        "category": "HYDROLOX",
         "cost": "2850",
         "description": "1990s Medium TWR atmospheric engine. Using technology developed for the Space Shuttle SSME, the RS-68 is a single-use engine, featuring a simplified design with less parts and an easier construction. The RS-68 powers the Delta IV launch vehicle family and is the most powerful LH2/LOX engine ever flown. Exhaust from the gas generator is used for roll control. Diameter: [2.43 m]. Plume configured by RealPlume.",
         "engine_config": "RS68",
@@ -155,5 +128,32 @@
         "title": "RS-68 Series",
         "upgrade": false,
         "year": "2002"
+    },
+    {
+        "category": "HYDROLOX",
+        "cost": "5000",
+        "description": "1980s medium TWR, atmospheric and vacuum use. The RD-0120 is a fuel-rich staged combustion engine developed to power the core stage of the Energia launcher. Diameter: [2.6 m]. Plume configured by RealPlume.",
+        "engine_config": "RD0120",
+        "entry_cost": "100000",
+        "entry_cost_mods": "RD-0120",
+        "era": "07-SPCPLANES",
+        "identical_part_name": "RD-0120",
+        "info": "",
+        "mod": "Cryo Engines",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "HumanRated",
+            "Hydrolox"
+        ],
+        "name": "cryoengine-375-2",
+        "orphan": false,
+        "ro": true,
+        "rp0": true,
+        "rp0_conf": true,
+        "spacecraft": "Energia",
+        "technology": "hydrolox1981",
+        "title": "RD-0120",
+        "upgrade": false,
+        "year": "1985"
     }
 ]
