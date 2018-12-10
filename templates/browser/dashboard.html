@@ -427,7 +427,7 @@
         var changes = {};
         for (var prop in now) {
           if (prop !== 'id') {
-            if (prop == 'module_tags') {
+            if (prop == 'module_tags' && !compareArrays(now[prop],prev[prop])) {
                 changes[prop] = {"new": now[prop], "old": prev[prop]};
             } else {
                 if (!prev || prev[prop] !== now[prop]) {
