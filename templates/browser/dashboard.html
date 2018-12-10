@@ -235,6 +235,7 @@
                     inputWidth: 150
                 },{
                     label: 'Name',
+                    disabled: true,
                     emptyText: 'Name',
                     name: 'name',
                     inputWidth: 150
@@ -450,8 +451,8 @@
     var queuedChanges = {};
     
     function addChangeSet(name, title, mod, row_id, changeSet) {
-        key = (name ? name + " - " : "") + (title ? title : "");
-        queuedChanges[key] = {row_id: row_id, mod: mod, changes: changeSet};
+        key = row_id;
+        queuedChanges[key] = {row_id: row_id, name: name, title: title, mod: mod, changes: changeSet};
         drawQueuedChanges();
         updateTable(changeSet, row_id, false);
     }
@@ -459,12 +460,12 @@
     function drawQueuedChanges() {
         if (Object.keys(queuedChanges).length > 0) {
             html="These changes are only staged locally, click commit to update the underlying json data.  If you refresh your browser they will be lost.<br/><br/><table class='blueTable'><tr><th>&nbsp;</th><th>Part Name - Title</th><th>Mod</th><th>Field</th><th>Old Value</th><th>New Value</th></tr>";
-            $.map( Object.keys(queuedChanges), function( name ) {
-                html+="<tr><td>" + getCancelButton(name, queuedChanges[name].row_id) + "</td><td>" + name + "</td><td>" + queuedChanges[name].mod + "</td><td colspan='3'>&nbsp;</td></tr>";
-                $.map( Object.keys(queuedChanges[name].changes), function( field_name ) {
+            $.map( Object.keys(queuedChanges), function( row_id ) {
+                html+="<tr><td>" + getCancelButton(row_id) + "</td><td>" + queuedChanges[row_id].name + " - " + queuedChanges[row_id].title + "</td><td>" + queuedChanges[row_id].mod + "</td><td colspan='3'>&nbsp;</td></tr>";
+                $.map( Object.keys(queuedChanges[row_id].changes), function( field_name ) {
                     html+="<tr><td colspan='3'>&nbsp;</td><td>" + field_name + "</td><td>" + 
-                        queuedChanges[name].changes[field_name]["old"] + "</td><td>" + 
-                        queuedChanges[name].changes[field_name]["new"] + "</td></tr>";
+                        queuedChanges[row_id].changes[field_name]["old"] + "</td><td>" + 
+                        queuedChanges[row_id].changes[field_name]["new"] + "</td></tr>";
                 });
             });
             html += "</table><br/><button onclick='cancelAllChanges()'>Cancel All Changes</button> &nbsp; <button onclick='commitChanges()'>Commit Changes to JSON Files</button>";
@@ -486,38 +487,55 @@
         grid.update();
     }
     
-    function getCancelButton(name, row_id) {
-        return "<button class='cancelButton' info='Cancel this change' onclick='cancelChange(\"" + name + "\", \"" + row_id + "\", true)'>X</button>";
+    function getCancelButton(row_id) {
+        return "<button class='cancelButton' info='Cancel this change' onclick='cancelChange(\"" + row_id + "\", true)'>X</button>";
     }
     
-    function cancelChange(name, row_id, shouldConfirm) {
+    function cancelChange(row_id, shouldConfirm) {
         if (!shouldConfirm || confirm("Are you sure you want to cancel this change?")) {
-            updateTable(queuedChanges[name].changes, row_id, true);
-            delete queuedChanges[name];
+            updateTable(queuedChanges[row_id].changes, row_id, true);
+            delete queuedChanges[row_id];
             drawQueuedChanges();
         }
     }
     
     function cancelAllChanges() {
         if (confirm("Are you sure you want to cancel all queued changes?")) {
-            $.map( Object.keys(queuedChanges), function( name ) {
-                cancelChange(name, queuedChanges[name].row_id, false);
+            $.map( Object.keys(queuedChanges), function( row_id ) {
+                cancelChange(row_id, false);
             });
         }
     }
     
     function generateConfigs() {
-        $.get("api/generate_all_configs", function( data ) {
-            if (data == "true") {
-                alert( "Configs successfully generated in /output folder." );
-            } else {
-                alert("Config generation failed.");
-            }
-        });
+        if (confirm("Are you sure you want to generate the configs? (any queued changes at the bottom will not currently be included)")) {
+            $.get("api/generate_all_configs", function( data ) {
+                if (data == "true") {
+                    alert( "Configs successfully generated in /output folder." );
+                } else {
+                    alert("Config generation failed.");
+                }
+            });
+        }
     }
     
     function commitChanges() {
-        alert("Not quite implemented yet.");
+        if (confirm('Are you sure you want to commit changes to JSON files?')) {
+            $.ajax({
+                url: 'api/commit_changes',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    "queued_changes": queuedChanges
+                }),
+                dataType: 'json',
+                success: function() {
+                    alert( "Changes successfully committed to JSON files.");
+                    queuedChanges = {};
+                    drawQueuedChanges();
+                }
+            });
+        }
     }
   </script>
   <br/><br/>

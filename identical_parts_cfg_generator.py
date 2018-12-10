@@ -25,8 +25,10 @@ def generate_identical_parts(parts):
                         identical_parts_map[idp] = set()
                     identical_parts_map[idp].add(part['name'])
     identical_part_configs = ""
-    for part_id in sorted(identical_parts_map.keys(), key=lambda x:x.lower()):
-        for name in identical_parts_map[part_id]:
+    for part_id in sorted(list(identical_parts_map.keys()), key=lambda x:x.lower()):
+        sorted_names = list(identical_parts_map[part_id])
+        sorted_names.sort(key=lambda x: x.lower())
+        for name in sorted_names:
             sorted_parts = list(identical_parts_map[part_id])
             sorted_parts.sort()
             identical_part_configs += identical_part_template.substitute(name=name, identical_parts=",".join(sorted_parts))

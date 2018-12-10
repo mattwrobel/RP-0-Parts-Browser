@@ -59,6 +59,7 @@ def create_app(test_config=None):
     def export_to_json():
         for mod in part_data.unique_values_for_columns['mod']:
             parts_for_mod = list(filter(lambda x: x['mod'] == mod, part_data.parts))
+            parts_for_mod.sort(key=lambda x: x['name'] if x['name'] is not None and len(x['name']) > 0 else x['title'] )
             text_file = open("data/" + make_safe_filename(mod)  + ".json", "w")
             text_file.write(json.dumps(parts_for_mod, sort_keys=True, indent=4, separators=(',', ': ')))
             text_file.close()
@@ -97,6 +98,19 @@ def create_app(test_config=None):
         generate_ecm_engines(part_data.parts)
         return "true"
     
+    @app.route('/api/commit_changes',  methods=['POST'])
+    def commit_changes():
+        queued_changes = request.get_json()
+        for row_id in queued_changes['queued_changes']:
+            part = part_data.get_part_by_name(queued_changes['queued_changes'][row_id]['name'])
+            for field_name in queued_changes['queued_changes'][row_id]['changes']:
+                part[field_name] = queued_changes['queued_changes'][row_id]['changes'][field_name]['new']
+        export_to_json()
+        return "true"
+    
+    def commit_change_set(change_set):
+        part = part_data.get_part_by_name(change_set['name']);
+    
     app.register_blueprint(bp)
     app.run()    
     return app
@@ -131,23 +145,6 @@ def dashboard():
         return render_template("browser/dashboard.html", parts=part_data.parts)
 
     return render_template("browser/dashboard.html", parts=part_data.parts)
-
-
-@bp.route("/<name>")
-def view_part(name):
-    """View a part."""
-    part = part_data.get_part_by_name(name)
-    if not part:
-        abort(404)
-
-    return render_template("browser/part.html", part=part)
-
-
-@bp.route("/<name>/edit", methods=["GET", "POST"])
-def edit_part(name):
-    """Edit a post."""
-    
-    return redirect(url_for(".view_part", name=name))
 
 
 if __name__ == "__main__":

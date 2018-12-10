@@ -28,9 +28,11 @@ class PartData:
     column_index = {}
     
     def get_part_by_name(self, name):
+        print(f'Getting part with name: {name}')
         for part in self.parts:
             if part["name"] == name:
                 return part
+        print('Did not find part, sadface.')
         return None
     
     def __init__(self):
@@ -53,7 +55,7 @@ class PartData:
                 f.close()
                 self.parts.extend(data)
                 print(f'Loaded {len(data)} parts from {file_name}')
-        self.parts.sort(key=lambda x: x['name'])
+        self.parts.sort(key=lambda x: x['name'] if x['name'].lower() is not None and len(x['name']) > 0 else x['title'].lower())
             
     # gets a list of unique values for each column we specified above, for filtering in the datatable.
     def index_columns(self):
