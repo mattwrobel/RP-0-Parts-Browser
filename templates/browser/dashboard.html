@@ -242,6 +242,7 @@
                         blank: false,
                         blankText: 'Required'
                     }
+
                 },{
                     label: 'Description',
                     emptyText: 'Description',
@@ -276,18 +277,6 @@
                         type: 'notnan',
                         text: 'Must be a number'
                     }
-                },{
-                    label: 'RO',
-                    type: 'checkbox',
-                    name: 'ro'
-                },{
-                    label: 'RP-0',
-                    type: 'checkbox',
-                    name: 'rp0'
-                },{
-                    label: 'RP-0 conf',
-                    type: 'checkbox',
-                    name: 'rp0_conf'
                 }, {
                     type: 'combo',
                     label: 'Category',
@@ -302,6 +291,10 @@
                     displayKey: 'category',
                     valueKey: 'category'
                 },{
+                    label: 'Info',
+                    emptyText: 'Info',
+                    name: 'info'
+                },{
                     label: 'Year',
                     emptyText: 'Year',
                     name: 'year',
@@ -309,26 +302,17 @@
                         type: 'notnan',
                         text: 'Must be a number'
                     }
-                },{
-                    label: 'Orphan',
-                    type: 'checkbox',
-                    name: 'orphan'
-                },{
-                    label: 'Upgrade',
-                    type: 'checkbox',
-                    name: 'upgrade'
-                },{
-                    label: 'Entry Cost Modifier',
-                    emptyText: 'Entry Cost Modifier',
-                    name: 'entry_cost_mods'
-                },{
-                    label: 'Identical Part Id',
-                    emptyText: 'Identical Part Id',
-                    name: 'identical_part_name'
-                },{
-                    label: 'Engine Config',
-                    emptyText: 'Engine Config',
-                    name: 'engine_config'
+                }, {
+                    type: 'combo',
+                    label: 'Technology',
+                    name: 'technology',
+                    data: {
+                        proxy: {
+                          url: 'api/combo_options/technology'
+                        }
+                    },
+                    displayKey: 'technology',
+                    valueKey: 'technology'
                 }, {
                     type: 'combo',
                     label: 'Era',
@@ -341,16 +325,56 @@
                     displayKey: 'era',
                     valueKey: 'era'
                 }, {
+                    label: 'RO',
+                    type: 'checkbox',
+                    name: 'ro'
+                },{
+                    label: 'RP-0',
+                    type: 'checkbox',
+                    name: 'rp0'
+                },{
+                    label: 'Orphan',
+                    type: 'checkbox',
+                    name: 'orphan'
+                },{
+                    label: 'RP-0 conf',
+                    type: 'checkbox',
+                    name: 'rp0_conf'
+                }, {
                     type: 'combo',
-                    label: 'Technology',
-                    name: 'technology',
+                    label: 'Spacecraft',
+                    name: 'spacecraft',
                     data: {
                         proxy: {
-                          url: 'api/combo_options/technology'
+                          url: 'api/combo_options/spacecraft'
                         }
                     },
-                    displayKey: 'technology',
-                    valueKey: 'technology'
+                    displayKey: 'spacecraft',
+                    valueKey: 'spacecraft'
+                },{
+                    type: 'combo',
+                    label: 'Engine Config',
+                    emptyText: 'Engine Config',
+                    name: 'engine_config',
+                    data: {
+                        proxy: {
+                          url: 'api/combo_options/engine_config'
+                        }
+                    },
+                    displayKey: 'engine_config',
+                    valueKey: 'engine_config'
+                },{
+                    label: 'Upgrade',
+                    type: 'checkbox',
+                    name: 'upgrade'
+                },{
+                    label: 'Entry Cost Modifier',
+                    emptyText: 'Entry Cost Modifier',
+                    name: 'entry_cost_mods'
+                },{
+                    label: 'Identical Part Id',
+                    emptyText: 'Identical Part Id',
+                    name: 'identical_part_name'
                 }, {
                     type: 'combo',
                     label: 'Module Tags',
