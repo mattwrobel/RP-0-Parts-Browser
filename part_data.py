@@ -88,27 +88,27 @@ class PartData:
         part = {
             "name": self.get_value(row, "Name"),
             "title": self.get_value(row, "Title"),
-            "cost": self.get_value(row, "Cost"),
-            "entry_cost": self.get_value(row, "EntryCost"),
             "description": self.get_value(row, "Description"),
             "mod": self.get_value(row, "MOD"),
-            "ro": self.get_boolean(row, "RO"),
-            "rp0": self.get_boolean(row, "RP-0"),
+            "cost": self.get_value(row, "Cost"),
+            "entry_cost": self.get_value(row, "EntryCost"),
             "category": self.get_value(row, "CATEGORY"),
             "info": self.get_value(row, "INFO"),
-            "era": self.get_value(row, "ERA"),
-            "upgrade": self.get_boolean(row, "UPGRADE"),
+            "year": self.get_value(row, "Year"),
             "technology": self.get_value(row, "Tech"),
+            "era": self.get_value(row, "ERA"),
+            "ro": self.get_boolean(row, "RO"),
+            "rp0": self.get_boolean(row, "RP-0"),
             "orphan": self.get_boolean(row, "ORPHAN"),
             "rp0_conf": self.get_boolean(row, "RP0conf"),
             "spacecraft": self.get_value(row, "SPACECRAFT"),
             "engine_config": self.get_value(row, "ENGINE CONFIG"),
-            "year": self.get_value(row, "Year"),
+            "upgrade": self.get_boolean(row, "UPGRADE"),
             "entry_cost_mods": self.get_value(row, "ECMS"),
             "identical_part_name": self.get_value(row, "IdentPart"),
             "module_tags": []
         }
-        
+
         # start => unlockParts
         if part['technology'] == 'start':
             part['technology'] = 'unlockParts'

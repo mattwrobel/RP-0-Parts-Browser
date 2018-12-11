@@ -212,10 +212,10 @@
             width: 700,
             height: 900,
             window: true,
-            scrollable: true,
+            scrollable: false,
             model: true,
             draggable: true,
-            inputWidth: 250,
+            inputWidth: 525,
             labelWidth: 175,
             url: 'submit.php',
             params: {
@@ -224,26 +224,19 @@
             },
             method: 'POST',
             defaults: {
-                type: 'string'
+                type: 'string',     
+                inputWidth: 525,
             },
             items: [
                 {
-                    label: 'Id',
-                    emptyText: 'Id',
-                    name: 'id',
-                    type: 'hidden',
-                    inputWidth: 150
-                },{
                     label: 'Name',
                     disabled: true,
                     emptyText: 'Name',
-                    name: 'name',
-                    inputWidth: 150
+                    name: 'name'
                 },{
                     label: 'Title',
                     emptyText: 'Title',
                     name: 'title',
-                    inputWidth: 250,
                     valid: {
                         type: 'title',
                         blank: false,
@@ -253,7 +246,6 @@
                     label: 'Description',
                     emptyText: 'Description',
                     name: 'description',
-                    inputWidth: 250,
                     type: "textarea"
                 }, {
                     type: 'combo',
@@ -272,7 +264,6 @@
                     label: 'Cost',
                     emptyText: 'Cost',
                     name: 'cost',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
@@ -281,7 +272,6 @@
                     label: 'Entry Cost',
                     emptyText: 'Entry Cost',
                     name: 'entry_cost',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
@@ -315,7 +305,6 @@
                     label: 'Year',
                     emptyText: 'Year',
                     name: 'year',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
