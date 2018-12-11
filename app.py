@@ -61,7 +61,7 @@ def create_app(test_config=None):
             parts_for_mod = list(filter(lambda x: x['mod'] == mod, part_data.parts))
             parts_for_mod.sort(key=lambda x: x['name'] if x['name'] is not None and len(x['name']) > 0 else x['title'] )
             text_file = open("data/" + make_safe_filename(mod)  + ".json", "w")
-            text_file.write(json.dumps(parts_for_mod, sort_keys=True, indent=4, separators=(',', ': ')))
+            text_file.write(json.dumps(parts_for_mod, indent=4, separators=(',', ': ')))
             text_file.close()
         return "true"
     @app.route('/api/generate_tree_engine_configs')

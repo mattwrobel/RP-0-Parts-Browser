@@ -212,10 +212,10 @@
             width: 700,
             height: 900,
             window: true,
-            scrollable: true,
+            scrollable: false,
             model: true,
             draggable: true,
-            inputWidth: 250,
+            inputWidth: 525,
             labelWidth: 175,
             url: 'submit.php',
             params: {
@@ -224,36 +224,29 @@
             },
             method: 'POST',
             defaults: {
-                type: 'string'
+                type: 'string',     
+                inputWidth: 525,
             },
             items: [
                 {
-                    label: 'Id',
-                    emptyText: 'Id',
-                    name: 'id',
-                    type: 'hidden',
-                    inputWidth: 150
-                },{
                     label: 'Name',
                     disabled: true,
                     emptyText: 'Name',
-                    name: 'name',
-                    inputWidth: 150
+                    name: 'name'
                 },{
                     label: 'Title',
                     emptyText: 'Title',
                     name: 'title',
-                    inputWidth: 250,
                     valid: {
                         type: 'title',
                         blank: false,
                         blankText: 'Required'
                     }
+
                 },{
                     label: 'Description',
                     emptyText: 'Description',
                     name: 'description',
-                    inputWidth: 250,
                     type: "textarea"
                 }, {
                     type: 'combo',
@@ -272,7 +265,6 @@
                     label: 'Cost',
                     emptyText: 'Cost',
                     name: 'cost',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
@@ -281,23 +273,10 @@
                     label: 'Entry Cost',
                     emptyText: 'Entry Cost',
                     name: 'entry_cost',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
                     }
-                },{
-                    label: 'RO',
-                    type: 'checkbox',
-                    name: 'ro'
-                },{
-                    label: 'RP-0',
-                    type: 'checkbox',
-                    name: 'rp0'
-                },{
-                    label: 'RP-0 conf',
-                    type: 'checkbox',
-                    name: 'rp0_conf'
                 }, {
                     type: 'combo',
                     label: 'Category',
@@ -312,34 +291,28 @@
                     displayKey: 'category',
                     valueKey: 'category'
                 },{
+                    label: 'Info',
+                    emptyText: 'Info',
+                    name: 'info'
+                },{
                     label: 'Year',
                     emptyText: 'Year',
                     name: 'year',
-                    inputWidth: 75,
                     valid: {
                         type: 'notnan',
                         text: 'Must be a number'
                     }
-                },{
-                    label: 'Orphan',
-                    type: 'checkbox',
-                    name: 'orphan'
-                },{
-                    label: 'Upgrade',
-                    type: 'checkbox',
-                    name: 'upgrade'
-                },{
-                    label: 'Entry Cost Modifier',
-                    emptyText: 'Entry Cost Modifier',
-                    name: 'entry_cost_mods'
-                },{
-                    label: 'Identical Part Id',
-                    emptyText: 'Identical Part Id',
-                    name: 'identical_part_name'
-                },{
-                    label: 'Engine Config',
-                    emptyText: 'Engine Config',
-                    name: 'engine_config'
+                }, {
+                    type: 'combo',
+                    label: 'Technology',
+                    name: 'technology',
+                    data: {
+                        proxy: {
+                          url: 'api/combo_options/technology'
+                        }
+                    },
+                    displayKey: 'technology',
+                    valueKey: 'technology'
                 }, {
                     type: 'combo',
                     label: 'Era',
@@ -352,16 +325,56 @@
                     displayKey: 'era',
                     valueKey: 'era'
                 }, {
+                    label: 'RO',
+                    type: 'checkbox',
+                    name: 'ro'
+                },{
+                    label: 'RP-0',
+                    type: 'checkbox',
+                    name: 'rp0'
+                },{
+                    label: 'Orphan',
+                    type: 'checkbox',
+                    name: 'orphan'
+                },{
+                    label: 'RP-0 conf',
+                    type: 'checkbox',
+                    name: 'rp0_conf'
+                }, {
                     type: 'combo',
-                    label: 'Technology',
-                    name: 'technology',
+                    label: 'Spacecraft',
+                    name: 'spacecraft',
                     data: {
                         proxy: {
-                          url: 'api/combo_options/technology'
+                          url: 'api/combo_options/spacecraft'
                         }
                     },
-                    displayKey: 'technology',
-                    valueKey: 'technology'
+                    displayKey: 'spacecraft',
+                    valueKey: 'spacecraft'
+                },{
+                    type: 'combo',
+                    label: 'Engine Config',
+                    emptyText: 'Engine Config',
+                    name: 'engine_config',
+                    data: {
+                        proxy: {
+                          url: 'api/combo_options/engine_config'
+                        }
+                    },
+                    displayKey: 'engine_config',
+                    valueKey: 'engine_config'
+                },{
+                    label: 'Upgrade',
+                    type: 'checkbox',
+                    name: 'upgrade'
+                },{
+                    label: 'Entry Cost Modifier',
+                    emptyText: 'Entry Cost Modifier',
+                    name: 'entry_cost_mods'
+                },{
+                    label: 'Identical Part Id',
+                    emptyText: 'Identical Part Id',
+                    name: 'identical_part_name'
                 }, {
                     type: 'combo',
                     label: 'Module Tags',
