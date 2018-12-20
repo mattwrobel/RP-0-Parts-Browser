@@ -3930,7 +3930,7 @@
         "title": "TT18-A Launch Stability Enhancer",
         "description": "The TT18-A Stability Enhancer uses ground-breaking fastening technology to significantly increase the stability of spacecraft during the pre-launch phase. While OMB Demolition has been criticized in the past for using \"big fancy words for a rocket holder\" in their description of their device, none can say the TT18 series doesn't deliver rock-solid clamping action, as advertised. The owner's manual strongly suggests these devices be placed on the bottommost section of the spacecraft, and activated as soon as the engines are lit, for optimal de-clamping performance.",
         "mod": "Stock (RO Config)",
-        "cost": "10",
+        "cost": "1",
         "entry_cost": "1",
         "category": "MATERIALS",
         "info": "",
